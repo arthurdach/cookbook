@@ -6,31 +6,38 @@
     <h2 class="text-center">Add a recipe</h2>
     <br />
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-12">
         <div class="form-group">
          <%= f.input :name, placeholder: "Recipe name", label: false %>
         </div>
       </div>
+    </div>
+
+    <div class="row">
       <div class="col-xs-6">
         <div class="form-group">
-          <%= f.input :description, placeholder: "Description", label: false %>
+          <%= f.association :course, prompt: "Course", label: false %>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="form-group">
+          <%= f.association :restriction, prompt: "Restriction", label: false %>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <div class="form-group">
-          <%= f.input :course, placeholder: "Course", label: false %>
+          <%= f.input :price, placeholder: "Price", label: false %>
         </div>
       </div>
       <div class="col-xs-6">
         <div class="form-group">
-          <%= f.input :restriction, placeholder: "Restriction", label: false %>
+          <%= f.input :photo, placeholder: "Photo", label:false %>
         </div>
       </div>
     </div>
 
-    </div>
  <!--  </div> -->
   <% end %>
 </div>
